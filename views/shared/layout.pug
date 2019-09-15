@@ -1,8 +1,8 @@
 html
     head
         title Learning NodeJs and Express
-        link(href="css/bootstrap.min.css", rel="stylesheet")
-        link(href="css/simple-sidebar.css", rel="stylesheet")
+        link(href="/css/bootstrap.min.css", rel="stylesheet")
+        link(href="/css/simple-sidebar.css", rel="stylesheet")
     body
         div(class="d-flex", id="wrapper")
             div(class="bg-light border-right", id="sidebar-wrapper")
@@ -12,6 +12,6 @@ html
                         a(class="list-group-item list-group-item-action bg-light", href=item.link)= item.title
             div(id="page-content-wrapper")
                 block content
-        script(src="js/script.js")
-        script(src="js/jquery.slim.min.js")
-        script(src="js/bootstrap.min.js")
+        script(src="/js/script.js")
+        script(src="/js/jquery.slim.min.js")
+        script(src="/js/bootstrap.min.js")

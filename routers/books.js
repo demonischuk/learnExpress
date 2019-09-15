@@ -9,5 +9,14 @@ router.route("/books")
             nav: NavigationService.get()
         });
     });
+router.route("/books/:id")
+    .get((req, res) => {
+        const { id } = req.params;
+
+        return res.render("books/index", {
+            title: `Book ${id}`,
+            nav: NavigationService.get()
+        });
+    });
 
 module.exports = router;
