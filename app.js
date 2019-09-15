@@ -17,8 +17,11 @@ app.use("/js", express.static(path.join(__dirname, "/node_modules/jquery/dist"))
 app.set("views", "./views");
 app.set("view engine", "pug");
 
-app.use("/", require("./routers/home"));
-app.use("/", require("./routers/books"));
+const NavigationService = require("./services/navationService");
+const nav = NavigationService.get();
+
+app.use("/", require("./routers/home")(nav));
+app.use("/", require("./routers/books")(nav));
 
 const port = 3000;
 
