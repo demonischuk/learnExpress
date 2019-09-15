@@ -8,7 +8,7 @@ router.route("/")
     .get((req, res) => {
         return res.render("home/index", {
             title: "Hello World",
-            items: [{
+            nav: [{
                 link: "/books",
                 title: "Books"
             },
