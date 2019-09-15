@@ -1,0 +1,16 @@
+<html>
+
+<head>
+    <title></title>
+</head>
+
+<body>
+    <h1>Welcome to <%=title%></h1>
+    <ul>
+        <% for (let i = 0; i < items.length; i++) {
+                %><li><a href="<%=items[i].link%>"><%=items[i].title%></a></li><%
+            }%>
+    </ul>
+</body>
+
+</html>

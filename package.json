@@ -1,0 +1,24 @@
+{
+  "name": "expresswebsite",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app",
+    "debug": "@powershell -Command $env:DEBUG='*';node app.js",
+    "test": "jest"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^4.3.1",
+    "chalk": "^2.4.2",
+    "debug": "^4.1.1",
+    "ejs": "^2.7.1",
+    "express": "^4.17.1",
+    "jest": "^24.9.0",
+    "jquery": "^3.4.1",
+    "morgan": "^1.9.1",
+    "pug": "^2.0.4"
+  }
+}
