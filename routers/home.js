@@ -1,4 +1,5 @@
 const express = require("express");
+const NavigationService = require("../services/navationService");
 
 const router = express.Router();
 router.route("/")
@@ -8,14 +9,7 @@ router.route("/")
     .get((req, res) => {
         return res.render("home/index", {
             title: "Hello World",
-            nav: [{
-                link: "/books",
-                title: "Books"
-            },
-            {
-                link: "/authors",
-                title: "Authors"
-            }]
+            nav: NavigationService.get()
         });
     });
 
