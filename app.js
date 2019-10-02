@@ -4,7 +4,7 @@ const express = require("express");
 const debug = require("debug")("app");
 const morgan = require("morgan");
 const path = require("path");
-
+const db = require("./infrastructure/database");
 const app = express();
 
 app.use(morgan("tiny"));
@@ -21,7 +21,7 @@ const NavigationService = require("./services/navationService");
 const nav = NavigationService.get();
 
 app.use("/", require("./routers/home")(nav));
-app.use("/", require("./routers/books")(nav));
+app.use("/", require("./routers/books")(nav, db));
 
 const port = 3000;
 
